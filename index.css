@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    /* primary colors */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* neutral colors */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* typography */
+    --font-size-p: 16px;
+    --font-family: 'Red Hat Display', sans-serif;
+    --weight-normal: 500;
+    --weight-semi-bold: 700;
+    --weight-bold: 900;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--pale-blue);
+    font-family: var(--font-family);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: repeat-x;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    width: calc(100% / 3);
+}
+
+.card-header img {
+    border-radius: 15px 15px 0 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card-body {
+    margin: 20px;
+    text-align: center;
+}
+
+.card-body h2 {
+    font-weight: var(--weight-bold);
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: var(--desaturated-blue);
+    font-weight: var(--weight-normal);
+    font-size: var(--font-size-p);
+    margin-bottom: 20px;
+}
+
+.card-body--sub-container {
+    display: flex;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+.sub-container--icon {
+    align-self: center;
+}
+
+.sub-container--info {
+    align-self: center;
+}
+
+.sub-container--info span {
+    font-weight: var(--weight-semi-bold);
+    font-size: 14pt;
+}
+
+.sub-container--btn {
+    cursor: pointer;
+    align-self: center;
+    color: var(--dark-blue);
+    font-weight: var(--weight-bold);
+    font-size: 12pt;
+    text-decoration: underline;
+}
+
+.sub-container--btn:hover {
+    color: var(--desaturated-blue);
+}
+
+.card-body--button input {
+    background-color: var(--bright-blue);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 100px;
+    border: none;
+}
+
+.card-body--button input:hover {
+    background: var(--desaturated-blue);
+}
+
+.card-footer {
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: var(--weight-normal);
+}
